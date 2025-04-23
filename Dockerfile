@@ -1,6 +1,9 @@
-FROM php:8.1-apache
+FROM php:8.2-apache
 
-# Copy all files to Apache web root
+# Install necessary PHP extensions
+RUN docker-php-ext-install pdo pdo_mysql mysqli
+
+# Copy project files into the container
 COPY . /var/www/html/
 
-# Enable CORS if needed via .htaccess or headers inside PHP
+EXPOSE 80
