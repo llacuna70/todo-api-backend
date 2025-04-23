@@ -1,8 +1,9 @@
 <?php
-    $host = 'localhost';
+    $host = 'yamanote.proxy.rlwy.net';
     $dbname = 'todo_app';
     $username = 'root';
-    $password = '';
+    $password = 'OfUfBxFUkccxQLdbGUpcemhogXpRRNts';
+    $port = 35635;
 
     try {
         $pdo = new PDO("mysql:host=$host;dbname=$dbname", $username, $password);
